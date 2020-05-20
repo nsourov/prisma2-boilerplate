@@ -1,0 +1,12 @@
+# IF THERE'S A GIT CONFLICT IN THIS FILE, DON'T SOLVE IT MANUALLY!
+# INSTEAD EXECUTE `prisma migrate fix`
+# Prisma Migrate lockfile v1
+# Read more about conflict resolution here: TODO
+
+20200520222655-init
+20200520222916-init
+20200520223028-init
+20200520223052-init
+20200520223148-init
+20200520223717-init
+20200520223927-init
