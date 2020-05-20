@@ -1,25 +1,15 @@
 const { PrismaClient } = require('@prisma/client');
-const faker = require('faker');
 const prisma = new PrismaClient();
 
 async function main() {
-	const randomName = faker.name.findName(); // Rowan Nikolaus
-	const randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz
-	await prisma.user.create({
+	await prisma.post.create({
 		data: {
-			name: randomName,
-			email: randomEmail,
-			posts: {
-				create: { title: 'Hello World' },
-			},
+			title: "Hello world!",
+			desc: "World is huge!"
 		},
 	});
-	const allUsers = await prisma.user.findMany({
-		include: {
-			posts: true,
-		},
-	});
-	console.dir(allUsers, { depth: null });
+	const posts = await prisma.post.findMany();
+	console.dir(posts, { depth: null });
 }
 
 main()

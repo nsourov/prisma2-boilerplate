@@ -5,7 +5,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "node index.js",
-    "prisma": "prisma"
+    "format:schema": "prisma format",
+    "migrate": "prisma migrate save --name init --experimental",
+    "apply:migration": "prisma migrate up --experimental",
+    "generate": "prisma generate"
   },
   "dependencies": {
     "@prisma/cli": "^2.0.0-beta.5",
